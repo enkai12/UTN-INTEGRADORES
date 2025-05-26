@@ -7,7 +7,7 @@
 
 ## Descripción
 
-Este trabajo integrador se enfoca en la comprensión y aplicación de conceptos de virtualización y seguridad en sistemas operativos. Incluye un análisis teórico respaldado por fuentes académicas, desarrollo de un proyecto práctico y presentación multimedia.
+Este trabajo integrador se enfoca en la comprensión y aplicación de conceptos de virtualización y seguridad en sistemas operativos. Incluye un análisis teórico respaldado por fuentes académicas, desarrollo de un proyecto práctico y presentación.
 
 ## Contenido
 
