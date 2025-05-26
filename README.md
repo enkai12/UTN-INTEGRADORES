@@ -36,24 +36,3 @@ El presente repositorio está organizado en distintas carpetas, una por cada mat
 - Diagramas de Venn, expresiones lógicas, documentación y video grupal.
 
 [Ver carpeta del proyecto →](./Matematica/README.md)
-
-## Estructura del Repositorio
-
-Ejemplo:
-
-├── Programacion1/
-│ ├── README.md
-│ ├── carpeta_teorica.pdf
-│ ├── codigo/
-│ └── video/
-├── AySO/
-│ ├── README.md
-│ ├── carpeta_digital.pdf
-│ └── video/
-├── Matematica/
-│ ├── README.md
-│ ├── teoria_conjuntos.pdf
-│ ├── programa.py
-│ ├── diagramas/
-│ └── video/
-└── README.md (este archivo)
