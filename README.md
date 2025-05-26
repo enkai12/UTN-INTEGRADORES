@@ -39,6 +39,8 @@ El presente repositorio está organizado en distintas carpetas, una por cada mat
 
 ## Estructura del Repositorio
 
+Ejemplo:
+
 ├── Programacion1/
 │ ├── README.md
 │ ├── carpeta_teorica.pdf
