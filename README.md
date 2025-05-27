@@ -36,3 +36,12 @@ El presente repositorio está organizado en distintas carpetas, una por cada mat
 - Diagramas de Venn, expresiones lógicas, documentación y video grupal.
 
 [Ver carpeta del proyecto →](./Matematica/README.md)
+
+### 📌 Organización Empresarial
+
+- Modelado de proceso de atención al cliente con BPMN.
+- Implementación de chatbot básico (sin código).
+- Integración de flujo chatbot y proceso BPMN.
+- Diagrama BPMN, testeo de chatbot y video grupal explicativo.
+
+[Ver carpeta del proyecto →](./OrganizacionEmpresarial/README.md)
