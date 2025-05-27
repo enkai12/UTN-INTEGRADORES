@@ -13,7 +13,7 @@ Este trabajo integrador tiene como finalidad que apliques los contenidos vistos 
 
 🧠 ¿Qué tenés que hacer?
 
-1. Desarrollo del trabajo grupal (mínimo dos integrantes)
+## 1. Desarrollo del trabajo grupal (mínimo dos integrantes)
 
 Deberán:
 
@@ -29,7 +29,7 @@ Probar el chatbot con preguntas reales y ajustar el modelo si es necesario.
 
 Desarrollar un video explicando el trabajo realizado.
 
-2. Archivos a entregar en el aula virtual:
+## 2. Archivos a entregar en el aula virtual
 
 ✅ Diagrama BPMN del proceso (.pdf o imagen).
 
