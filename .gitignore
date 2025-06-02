@@ -1,1 +1,37 @@
-.DS_Store
+# Archivos de caché y compilación de Python
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Entornos virtuales
+# Si usas venv (recomendado)
+venv/
+env/
+
+# Archivos específicos del sistema operativo
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Archivos de IDEs (Entornos de Desarrollo Integrado)
+.vscode/ # Para Visual Studio Code
+.idea/   # Para PyCharm
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de datos generados durante las pruebas (si los hubiera)
+# Por ejemplo, si generas archivos de texto temporales o bases de datos SQLite
+# para tus pruebas de rendimiento, podrías añadir algo como:
+# resultados_pruebas.txt
+# .db
+
+# Archivos de logs
+*.log
+
+# Archivos de configuración con información sensible (si los tuvieras)
+# Por ejemplo, claves API, contraseñas, etc.
+# config.ini
+# settings.py
