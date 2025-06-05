@@ -46,4 +46,10 @@ def calcular_promedio_positivos_recursivo(lista_de_numeros, suma_acumulada=0, co
             indice_actual + 1                               # paso al sgte numero
         )
     else:
-        
+        # si es 0 o negativo
+        return calcular_promedio_positivos_recursivo(
+            lista_de_numeros,
+            suma_acumulada,
+            conteo_acumulado,
+            indice_actual + 1
+        )
