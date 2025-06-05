@@ -1,5 +1,5 @@
 # Función recursiva para calcular el promedio  
-
+import sys
 """ 
 El módulo sys te da acceso a herramientas para interactuar con el sistema Python 
 que está ejecutando tu código.
@@ -8,9 +8,6 @@ La usamos específicamente para sys.setrecursionlimit(), que nos permite aumenta
 una función puede llamarse a sí misma (recursión). Hacemos esto para que nuestras pruebas de rendimiento con listas 
 muy grandes no fallen por el límite de recursión por defecto de Python. 
 """
-
-import sys
-
 sys.setrecursionlimit(200000)
 
 def calcular_promedio_positivos_recursivo(lista_de_numeros, suma_acumulada=0, conteo_acumulado=0, indice_actual=0): # inicializamos las variables
@@ -27,3 +24,12 @@ def calcular_promedio_positivos_recursivo(lista_de_numeros, suma_acumulada=0, co
     Retorna:
         float: El promedio de los números positivos y si no hay devuelve 0.
     """
+    # Condición que detiene la recursión
+    # si el indice actual es igual al tamaño de la lista (revisó toda la lista)
+    if indice_actual == len(lista_de_numeros):
+        if conteo_acumulado > 0:
+            return suma_acumulada / conteo_acumulado # se calcula el promedio
+        else:
+            # devuelve 0 si no hay numeros positivos o si está vaciá
+            return 0 
+    
