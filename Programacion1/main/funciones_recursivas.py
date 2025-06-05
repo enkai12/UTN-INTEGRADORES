@@ -33,3 +33,17 @@ def calcular_promedio_positivos_recursivo(lista_de_numeros, suma_acumulada=0, co
             # devuelve 0 si no hay numeros positivos o si está vaciá
             return 0 
     
+    # paso recursivo, se llama la función así misma
+    numero_en_posicion_actual = lista_de_numeros[indice_actual] # obtengo el numero en la posicion actual
+    
+    
+    if numero_en_posicion_actual > 0: # si es positivo..
+        
+        return calcular_promedio_positivos_recursivo(
+            lista_de_numeros,
+            suma_acumulada + numero_en_posicion_actual,     # se suma el numero actual
+            conteo_acumulado + 1,                           # aumento el contador
+            indice_actual + 1                               # paso al sgte numero
+        )
+    else:
+        
