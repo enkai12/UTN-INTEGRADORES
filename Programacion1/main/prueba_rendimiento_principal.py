@@ -18,11 +18,10 @@ Un número demasiado alto puede causar problemas de memoria
 """
 sys.setrecursionlimit(200000) 
 
-# Defimos los diferentes tamaños de lista para ejecutar nuestras pruebas, queremos ver
+# Definimos los diferentes tamaños de lista para ejecutar nuestras pruebas, queremos notar y ver
 # la diferencia de tiempos.
 tamanos_de_lista = [100, 1000, 5000, 10000, 50000, 100000]
 
-# inicializamos listas vacías para guardar los tiempos que medimos para cada función
-
+# inicializamos listas vacías para guardar los tiempos para cada función
 tiempos_funcion_iterativa = []
 tiempos_funcion_recursiva = []
