@@ -25,3 +25,7 @@ tamanos_de_lista = [100, 1000, 5000, 10000, 50000, 100000]
 # inicializamos listas vacías para guardar los tiempos para cada función
 tiempos_funcion_iterativa = []
 tiempos_funcion_recursiva = []
+
+ejecuciones_por_medicion = 100 # cuantas veces se repetira cada medicion (nos aseguramos de obtener resultados mas precisos)
+
+
