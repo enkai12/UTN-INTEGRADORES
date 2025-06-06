@@ -53,3 +53,20 @@ def calcular_promedio_positivos_recursivo(lista_de_numeros, suma_acumulada=0, co
             conteo_acumulado,
             indice_actual + 1
         )
+        
+# chequeamos si nuestro codigo funciona bien
+if __name__ == "__main__":
+    print("\nTest y pruebas unitarias")
+    # numeros positivos (1 + 2 + 3 + 4 + 5) / 5 = 3.0
+    assert calcular_promedio_positivos_recursivo([1, 2, 3, 4, 5]) == 3.0, "Test 1 Recursivo Fallido: Lista con solo positivos"
+    # numeros negativos = 0
+    assert calcular_promedio_positivos_recursivo([-1, -2, -3]) == 0, "Test 2 Recursivo Fallido: Lista con solo negativos"
+    # (10+20+30)/3 = 20.0
+    assert calcular_promedio_positivos_recursivo([10, -5, 20, 0, 30]) == 20.0, "Test 3 Recursivo Fallido: Lista mixta"
+    # lista vacía = 0
+    assert calcular_promedio_positivos_recursivo([]) == 0, "Test 4 Recursivo Fallido: Lista vacía"
+    # 7/1 = 7.0
+    assert calcular_promedio_positivos_recursivo([7]) == 7.0, "Test 5 Recursivo Fallido: Un solo positivo"
+    # numero negativo = 0
+    assert calcular_promedio_positivos_recursivo([-7]) == 0, "Test 6 Recursivo Fallido: Un solo negativo"
+    print("Todas las pruebas para la función recursiva pasaron correctamente.")
