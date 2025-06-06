@@ -2,7 +2,8 @@
 
 Este repositorio contiene los trabajos integradores correspondientes a diferentes materias de la carrera **Tecnicatura Universitaria en Programación**, desarrollados por el grupo conformado por:
 
-### Alumnos:
+## Alumnos
+
 - **Agustín Emiliano Sotelo Carmelich** — Comisión 22  
 - **Bruno Giuliano Vapore** — Comisión 22
 

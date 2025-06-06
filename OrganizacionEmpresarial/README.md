@@ -1,72 +1,54 @@
-# Trabajo Integrador Final – Organización Empresarial
+# Proyecto Integrador — Organización Empresarial
 
-Apertura: martes, 27 de mayo de 2025, 00:00
-Cierre: jueves, 19 de junio de 2025, 23:59
+## Integrantes
 
-📌 Entrega obligatoria – Aprobación directa de la materia
+- **Agustín Emiliano Sotelo Carmelich** — Comisión 22  
+- **Bruno Giuliano Vapore** — Comisión 22
 
-Para poder lograr la aprobación directa de la materia, es necesario que hayas completado todas las actividades del aula, los parciales (o sus recuperatorios) aprobados con 60 % o más, y este Trabajo Integrador con 60% o más.
+---
 
-✅ Objetivo general
+## Descripción
 
-Este trabajo integrador tiene como finalidad que apliques los contenidos vistos en la materia Organización Empresarial mediante el modelado de un proceso de atención al cliente utilizando BPMN y la implementación de un chatbot básico.
+Este trabajo integrador tiene como finalidad aplicar los contenidos de la materia **Organización Empresarial** mediante el modelado de un proceso de atención al cliente utilizando **BPMN** y la implementación de un **chatbot básico** con herramientas sin código.
 
-🧠 ¿Qué tenés que hacer?
+---
 
-## 1. Desarrollo del trabajo grupal (mínimo dos integrantes)
+## Contenido
 
-Deberán:
+- 🗂 Diagrama BPMN del proceso de atención al cliente (formato PDF o imagen).  
+- 📄 Documento con al menos 5 preguntas frecuentes y respuestas del chatbot.  
+- 🎥 Video grupal explicativo con presentación del trabajo.
 
-Seleccionar un proceso simple de atención al cliente (por ejemplo, responder preguntas frecuentes).
+---
 
-Modelar el proceso utilizando BPMN.
+## Instrucciones de Uso
 
-Crear un chatbot básico con herramientas sin código (como Dialogflow, Microsoft Bot Framework u otra).
+1. Consultar el **diagrama BPMN** para comprender el proceso modelado.  
+2. Leer el documento con las **preguntas frecuentes** y sus respuestas automatizadas.  
+3. Visualizar el **video explicativo** donde se presenta el proceso, el chatbot y una reflexión grupal.
 
-Integrar el flujo del chatbot con el proceso modelado.
+---
 
-Probar el chatbot con preguntas reales y ajustar el modelo si es necesario.
+## Metodología
 
-Desarrollar un video explicando el trabajo realizado.
+- Selección de un proceso de atención al cliente.  
+- Modelado del proceso mediante **BPMN**.  
+- Creación de un chatbot básico con herramientas sin código.  
+- Integración entre el proceso modelado y el flujo del chatbot.  
+- Pruebas reales y ajustes.  
+- Grabación del video con explicación y reflexión final.
 
-## 2. Archivos a entregar en el aula virtual
+---
 
-✅ Diagrama BPMN del proceso (.pdf o imagen).
-
-✅ Documento con al menos 5 preguntas frecuentes y las respuestas generadas por el chatbot.
-
-✅ Enlace al video grupal (YouTube en modo oculto, Google Drive o similar).
-
-🎥 Instrucciones para el video grupal explicativo
-
-Además del trabajo práctico, deben realizar un video grupal en el que expliquen y presenten lo realizado.
-El video es obligatorio y será evaluado como parte del trabajo integrador.
-
-🧾 Guion sugerido del video:
-
-Presentación de cada uno de los integrantes del grupo y del proceso elegido.
-
-Explicación clara del diagrama BPMN.
-
-Demostración del chatbot en funcionamiento.
-
-Reflexión final sobre el trabajo realizado.
-
-⏱ Duración estimada: 5 a 10 minutos.
-🎤 Deben participar todos los integrantes del grupo.
-
-📝 Evaluación
+## Evaluación
 
 Se evaluará:
 
-La calidad del modelo BPMN.
+- ✔️ La calidad del modelo BPMN.  
+- ✔️ El funcionamiento básico del chatbot.  
+- ✔️ La coherencia entre el proceso y la automatización.  
+- ✔️ La explicación del video: claridad, comprensión y reflexión crítica.
 
-El funcionamiento básico del chatbot.
+📅 **Fecha límite de entrega:** jueves 19 de junio de 2025
 
-La coherencia entre el proceso y la automatización.
-
-La explicación del video (claridad, comprensión, reflexión crítica).
-
-📊 Rúbrica de evaluación incluida en el aula para consulta.
-
-📅 Fecha límite de entrega: 19 de junio
+---
