@@ -1,4 +1,4 @@
-# Proyectos Integradores
+# Proyectos Integradores — UTN TUPAD 2025
 
 Este repositorio contiene los trabajos integradores correspondientes a diferentes materias de la carrera **Tecnicatura Universitaria en Programación**, desarrollados por el grupo conformado por:
 
@@ -9,7 +9,21 @@ Este repositorio contiene los trabajos integradores correspondientes a diferente
 
 ---
 
-## Introducción
+## Indice
+
+- [Proyectos Integradores — UTN TUPAD 2025](#proyectos-integradores--utn-tupad-2025)
+  - [Alumnos](#alumnos)
+  - [Indice](#indice)
+  - [Introduccion {#introduccion}](#introduccion-introduccion)
+  - [Materias Incluidas {#materias-incluidas}](#materias-incluidas-materias-incluidas)
+    - [📌 Programacion I {#programacion-i}](#-programacion-i-programacion-i)
+    - [📌 Arquitectura y Sistemas Operativos AYSO {#arquitectura-y-sistemas-operativos-ayso}](#-arquitectura-y-sistemas-operativos-ayso-arquitectura-y-sistemas-operativos-ayso)
+    - [📌 Matematica {#matematica}](#-matematica-matematica)
+    - [📌 Organizacion Empresarial {#organizacion-empresarial}](#-organizacion-empresarial-organizacion-empresarial)
+
+---
+
+## Introduccion {#introduccion}
 
 A lo largo del cuatrimestre, se nos propuso la realización de proyectos integradores en distintas asignaturas. Estos trabajos tienen como objetivo aplicar de forma práctica los conocimientos adquiridos, fomentar el trabajo colaborativo y fortalecer habilidades transversales como la investigación, la resolución de problemas y la documentación técnica.
 
@@ -17,9 +31,9 @@ El repositorio está organizado en distintas carpetas, una por cada materia, con
 
 ---
 
-## Materias Incluidas
+## Materias Incluidas {#materias-incluidas}
 
-### 📌 Programación I
+### 📌 Programacion I {#programacion-i}
 
 - Investigación sobre algoritmos de búsqueda, ordenamiento y estructuras de datos avanzadas.  
 - Desarrollo de un caso práctico en Python.  
@@ -29,7 +43,7 @@ El repositorio está organizado en distintas carpetas, una por cada materia, con
 
 ---
 
-### 📌 Arquitectura y Sistemas Operativos (AYSO)
+### 📌 Arquitectura y Sistemas Operativos AYSO {#arquitectura-y-sistemas-operativos-ayso}
 
 - Investigación sobre virtualización o seguridad en sistemas.  
 - Elaboración de carpeta digital, código si aplica, y video explicativo.  
@@ -39,7 +53,7 @@ El repositorio está organizado en distintas carpetas, una por cada materia, con
 
 ---
 
-### 📌 Matemática
+### 📌 Matematica {#matematica}
 
 - Desarrollo teórico con conjuntos y lógica.  
 - Implementación en Python de operaciones con DNIs y años de nacimiento.  
@@ -49,7 +63,7 @@ El repositorio está organizado en distintas carpetas, una por cada materia, con
 
 ---
 
-### 📌 Organización Empresarial
+### 📌 Organizacion Empresarial {#organizacion-empresarial}
 
 - Modelado de proceso de atención al cliente con BPMN.  
 - Implementación de chatbot básico (sin código).  
