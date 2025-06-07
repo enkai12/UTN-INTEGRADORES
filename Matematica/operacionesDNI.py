@@ -14,7 +14,7 @@ dni_1 = input("Ingrese el primer DNI: ")
 dni_2 = input("Ingrese el segundo DNI: ")
 
 print(f"DNI: {dni_1}")
-print(f"DNI: {dni_2}")
+print(f"DNI: {dni_2}\n")
 
 
 #   Generación automática de los conjuntos de dígitos únicos.
@@ -52,40 +52,10 @@ print(f"A Δ B = {difSimetrica}\n")
 #   Conteo de frecuencia de cada dígito en cada DNI utilizando estructuras repetitivas.
 
 def frecuencia(dni):
-    contador0 = 0
-    contador1 = 0
-    contador2 = 0
-    contador3 = 0
-    contador4 = 0
-    contador5 = 0
-    contador6 = 0
-    contador7 = 0
-    contador8 = 0
-    contador9 = 0
-    for digito in dni:      
-        digito = int(digito)
-        if digito == 0:
-            contador0 += 1
-        elif digito == 1:
-            contador1 += 1
-        elif digito == 2:
-            contador2 += 1 
-        elif digito == 3:
-            contador3 += 1
-        elif digito == 4:
-            contador4 += 1
-        elif digito == 5:
-            contador5 += 1 
-        elif digito == 6:
-            contador6 += 1 
-        elif digito == 7:
-            contador7 += 1 
-        elif digito == 8:
-            contador8 += 1
-        else:
-            contador9 += 1
-    return (f"Cero: {contador0}\nUno: {contador1}\nDos: {contador2}\nTres: {contador3}\nCuatro: {contador4}\nCinco: {contador5}\nSeis: {contador6}\nSiete: {contador7}\nOcho: {contador8}\nNueve: {contador9}\n ")
-
+    listaContadores = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    for digito in str(dni):
+        listaContadores[int(digito)] += 1
+    return (f"Cero: {listaContadores[0]}\nUno: {listaContadores[1]}\nDos: {listaContadores[2]}\nTres: {listaContadores[3]}\nCuatro: {listaContadores[4]}\nCinco: {listaContadores[5]}\nSeis: {listaContadores[6]}\nSiete: {listaContadores[7]}\nOcho: {listaContadores[8]}\nNueve: {listaContadores[9]}\n ")
 
 print(f"En el primer DNI la frecuencia de cada dígito es:\n{frecuencia(dni_1)}") 
 print(f"En el segundo DNI la frecuencia de cada dígito es:\n{frecuencia(dni_2)}\n") 
