@@ -1,8 +1,7 @@
 # Función recursiva para calcular el promedio  
 import sys
 """ 
-El módulo sys te da acceso a herramientas para interactuar con el sistema Python 
-que está ejecutando tu código.
+El módulo sys te da acceso a herramientas para interactuar con el Python.
 
 La usamos específicamente para sys.setrecursionlimit(), que nos permite aumentar el número máximo de veces que 
 una función puede llamarse a sí misma (recursión). Hacemos esto para que nuestras pruebas de rendimiento con listas 
