@@ -1,105 +1,108 @@
-# # ✨ Proyecto Integrador — Programación I ✨
 
-## ## 👥 Integrantes
+# Proyecto Integrador: Análisis de Eficiencia de Algoritmos
 
-* **Agustín Emiliano Sotelo Carmelich** — Comisión 22
-* **Bruno Giuliano Vapore** — Comisión 22
+**Programación I — Comisión 22**  
 
-📺 [Ver video explicativo del proyecto integrador](https://youtu.be/wNkBKJ2LyiE)
+Un análisis comparativo entre soluciones iterativas y recursivas para un problema de cálculo de promedios, desarrollado como proyecto final de la asignatura.
 
 ---
 
-## ## 📂 Estructura del Repositorio
+## 👥 Integrantes
+
+- Agustín Emiliano Sotelo Carmelich  - Comisión 22
+- Bruno Giuliano Vapore - Comisión 22
+
+---
+
+## 📺 Video Explicativo
+
+[Ver video explicativo del proyecto integrador](https://youtu.be/wNkBKJ2LyiE)
+
+---
+
+## 1. Descripción del Proyecto
+
+Este repositorio contiene el proyecto final integrador de la asignatura **Programación I**, enfocado en el diseño, implementación y análisis de eficiencia de algoritmos.
+
+### 🎯 Problema Central
+
+El objetivo es calcular el promedio de los números positivos contenidos dentro de una lista de enteros. Para simular un escenario realista, se utiliza una lista de notas de alumnos, donde valores negativos (como `-1`) representan ausencias y deben ser excluidos del cálculo.
+
+### 💡 Enfoques Implementados
+
+Se desarrollaron dos soluciones distintas para resolver el mismo problema, permitiendo una comparación directa de su rendimiento y estructura:
+
+- 🔁 **Solución Iterativa:** Utiliza bucles (`for` y `while`) para recorrer la lista de manera secuencial.
+
+- 🔙 **Solución Recursiva:** Resuelve el problema dividiéndolo en subproblemas idénticos más pequeños, con un caso base definido para detener las llamadas.
+
+---
+
+## 2. Estructura del Repositorio
 
 ```
 Programacion1/
-├── carpeta_digital/                         
+├── carpeta_digital/
 │   ├── Trabajo Final Integrador - Programación I - Sotelo Carmelich y Vapore.pdf   # Informe final del proyecto
 │   └── Presentación PowerPoint.pptx                                               # Diapositivas de la exposición
 ├── main/
-│   ├── funciones_iterativas.py               # Función iterativa + pruebas
-│   ├── funciones_recursivas.py               # Función recursiva + pruebas
-│   └── prueba_rendimiento_principal.py       # Script para pruebas de rendimiento
+│   ├── funciones_iterativas.py               # Función iterativa + pruebas de unidad
+│   ├── funciones_recursivas.py               # Función recursiva + pruebas de unidad
+│   └── prueba_rendimiento_principal.py       # Script para pruebas de rendimiento comparativo
 ├── README.md                                  # Documentación principal del proyecto
 ```
 
 ---
 
-## ## 🚀 Análisis de Eficiencia de Algoritmos Iterativos y Recursivos
+## 3. Metodología y Desarrollo
 
-Este repositorio contiene el **proyecto integrador final** de la asignatura **Programación I**, centrado en el **análisis de eficiencia de algoritmos**.
+### 🔁 Enfoque Iterativo
 
-### ### 🔹 Problema a Resolver
+La función `promedio_iterativo` recorre la lista una sola vez, utilizando dos acumuladores: uno para la suma de los números positivos y otro para el conteo de los mismos. Este enfoque es directo, fácil de entender y altamente eficiente en el uso de memoria, ya que no genera nuevas llamadas en el call stack.
 
-> **Calcular el promedio de números positivos dentro de una lista.**
+### 🔙 Enfoque Recursivo
 
-### ### 🔹 Enfoques Implementados
-
-* 🔀 Una **solución recursiva** (la función se llama a sí misma)
-* 🔁 Una **solución iterativa** (usando bucles `for` y `while`)
-
-Para las pruebas se simula un caso realista con **notas de alumnos**, donde valores como `-1` representan ausencias y son **excluidos del cálculo del promedio**.
+La función `promedio_recursivo` aborda el problema desde una perspectiva de "divide y vencerás". En cada llamada, procesa el primer elemento de la lista y se invoca a sí misma con el resto de la lista. El caso base que detiene la recursión es una lista vacía. Aunque es una solución conceptualmente elegante, su principal desventaja es el mayor consumo de memoria en la pila de llamadas (call stack) y el riesgo de provocar un desbordamiento de pila (stack overflow) al procesar listas de gran tamaño.
 
 ---
 
-## ## 💡 Características Destacadas
+## 4. Pruebas y Análisis de Resultados
 
-### ### 🔘 Enfoque Iterativo
+### ✅ Pruebas de Funcionalidad
 
-Función optimizada que recorre la lista paso a paso, acumulando la suma y el conteo de números positivos de forma simple y eficiente.
+Para garantizar la robustez y correctitud de ambos algoritmos, cada archivo (`funciones_iterativas.py` y `funciones_recursivas.py`) incluye una serie de pruebas de unidad utilizando `assert`. Estos tests cubren los siguientes casos:
 
-### ### 🔙 Enfoque Recursivo
+- Listas vacías.  
+- Listas que contienen únicamente valores positivos.  
+- Listas que contienen únicamente valores negativos.  
+- Listas mixtas con valores positivos y negativos.
 
-Solución elegante que resuelve el problema dividiéndolo en subproblemas más pequeños, utilizando una estructura recursiva con un caso base claro.
+### ⏱️ Análisis de Rendimiento
 
----
+El script `prueba_rendimiento_principal.py` se dedica exclusivamente a comparar la eficiencia de ambas funciones. Utilizando la librería `timeit`, mide los tiempos de ejecución para procesar listas de gran tamaño y presenta los resultados en una tabla comparativa directamente en la terminal, facilitando una evaluación clara y visual del rendimiento.
 
-## ## 🧪 Pruebas de Funcionalidad
+### ⚙️ Manejo de Casos Especiales
 
-Cada archivo contiene **tests con `assert`** que validan el correcto funcionamiento de las funciones ante distintos escenarios:
-
-* Listas vacías
-* Solo valores positivos
-* Solo valores negativos
-* Listas mixtas (positivos y negativos)
-
----
-
-## ## ⏱️ Análisis de Rendimiento
-
-Se incluye un script principal dedicado a:
-
-* Medir tiempos de ejecución con `timeit`
-* Comparar el rendimiento de ambas funciones
-* Mostrar los resultados en una **tabla legible en la terminal**
-
-Esto permite un análisis visual rápido y efectivo.
-
----
-
-## ## ⚙️ Manejo de Casos Especiales
-
-Para probar listas **muy grandes**, se aumenta el **límite de recursión** mediante:
+Para poder realizar pruebas de rendimiento exigentes en la función recursiva sin que colapse, se aumenta manualmente el límite de recursión de Python al inicio del script de pruebas:
 
 ```python
+# Permite realizar pruebas con listas de gran tamaño en la función recursiva
 import sys
 sys.setrecursionlimit(200000)
 ```
 
-Esto permite realizar pruebas de rendimiento más exigentes sin que la función recursiva colapse por el límite predeterminado de Python.
+---
+
+## 5. Material Complementario
+
+- 📄 **Informe Final (PDF):** Documento detallado con el análisis completo del proyecto.  
+- 📊 **Presentación (PowerPoint):** Diapositivas utilizadas en la defensa del proyecto.  
+- 📺 **Video Explicativo (YouTube):** [Ver video explicativo del proyecto](https://youtu.be/wNkBKJ2LyiE)
 
 ---
 
-## ## 📌 Material Complementario
+## 6. Conclusión
 
-* 📄 Informe PDF del trabajo final
-* 📊 Presentación PowerPoint
-* 🎥 Video explicativo del proyecto
+Este proyecto nos permitió obtener una comprensión práctica y profunda sobre cómo la elección de un algoritmo impacta directamente en la eficiencia y escalabilidad de una solución. La principal lección aprendida es que la programación eficaz va más allá de la simple correctitud funcional.
 
----
-
-## ## ✅ Conclusión
-
-Este proyecto nos permitió entender en profundidad cómo se comportan los algoritmos en diferentes contextos, y nos dejó un mensaje clave:
-
-> **No alcanza con que el código funcione, también debe ser eficiente, robusto y adaptable al mundo real.**
+> No alcanza con que el código funcione; también debe ser eficiente, robusto y adaptable a las restricciones del mundo real.
