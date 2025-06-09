@@ -18,7 +18,7 @@ El proyecto desarrolla:
 - una **solución iterativa** (usando bucles `for` y `while`)
 - y una **solución recursiva** (donde la función se invoca a sí misma)
 
-Para las pruebas de rendimiento, simulamos un escenario realista con **notas de alumnos**, incluyendo valores no válidos (como `-1`) que son inteligentemente **ignorados** en el cálculo.
+Para las pruebas de rendimiento, simulamos un escenario realista con **notas de alumnos**, incluyendo valores no válidos (como `-1`) que pueden representar "Ausente" y que son inteligentemente **ignorados** en el cálculo.
 
 ---
 
@@ -66,7 +66,6 @@ Progracion1/main/
 ├── funciones_iterativas.py         # ➡️ Implementación de la función iterativa y pruebas básicas
 ├── funciones_recursivas.py         # ➡️ Implementación de la función recursiva y pruebas básicas
 ├── prueba_rendimiento_principal.py # ➡️ Script principal para pruebas de rendimiento y comparación
-└── .gitignore                      # ➡️ Archivos y carpetas ignoradas por Git
 ```
 
 ---
