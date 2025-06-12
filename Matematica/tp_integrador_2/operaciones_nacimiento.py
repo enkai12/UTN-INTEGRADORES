@@ -79,6 +79,24 @@ print(f"Cantidad de años impares: {contador_impares}")
 
 # 3. Si todos nacieron despues del 2000, mostrar que pertenecen a la generacion Z.
 
+if anio_nacimiento_1 > 2000 and anio_nacimiento_2 > 2000:
+    print("Pertenecen - Grupo Z")
+    
+# 4. Si alguien nacio en año bisiesto, mostrar "Tenemos un año especial"
+    # Reutilizo la funcion es_bisiesto
+if es_bisiesto(anio_nacimiento_1) or es_bisiesto(anio_nacimiento_2):
+    print("Nota: Tenemos un año especial!")
+    
+# 5. implementacion de la funcion es_bisiesto
+print("\n-- Comprobador de año Bisiesto --")
+
+anio_a_verificar = int(input("Ingrese un año para determinar si es bisiesto: "))
+
+if es_bisiesto(anio_a_verificar):
+    print(f"El año {anio_a_verificar} es Bisiesto!")
+else:
+    print(f"El año {anio_a_verificar} No es Bisiesto.")
+    
 
 
 
