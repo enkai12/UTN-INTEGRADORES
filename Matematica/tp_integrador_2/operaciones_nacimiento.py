@@ -3,12 +3,12 @@ import datetime
 """       
 B. Operaciones con años de nacimiento
 
-  Ingreso de los años de nacimiento (Si dos o más integrantes del grupo tienen el mismo año, ingresar algún dato ficticio, según el caso).
-  Contar cuántos nacieron en años pares e impares utilizando estructuras repetitivas.
-  Si todos nacieron después del 2000, mostrar "Grupo Z".
-  Si alguno nació en año bisiesto, mostrar "Tenemos un año especial".
-  Implementar una función para determinar si un año es bisiesto.
-  Calcular el producto cartesiano entre el conjunto de años y el conjunto de edades actuales.
+  1. Ingreso de los años de nacimiento (Si dos o más integrantes del grupo tienen el mismo año, ingresar algún dato ficticio, según el caso).
+  2. Contar cuántos nacieron en años pares e impares utilizando estructuras repetitivas.
+  3. Si todos nacieron después del 2000, mostrar "Grupo Z".
+  4. Si alguno nació en año bisiesto, mostrar "Tenemos un año especial".
+  5. Implementar una función para determinar si un año es bisiesto.
+  6. Calcular el producto cartesiano entre el conjunto de años y el conjunto de edades actuales.
 
   Ingreso de los años de nacimiento. 
   
@@ -52,6 +52,70 @@ def calcular_producto_cartesiano(conjunto_a: list, conjunto_b: list) -> list:
 #-----------------------------------------------------------------------------------------------
 
 # Programa principal:
+
+# 1. operaciones con años de nacimiento:
+anio_nacimiento_1 = int(input("Ingrese el primer año de nacimiento: "))
+anio_nacimiento_2 = int(input("Ingrese el segundo año de nacimiento: "))
+
+print(f"\n1er Año de nacimiento: {anio_nacimiento_1}")
+print(f"\n2do Año de nacimiento: {anio_nacimiento_2}")
+
+# 2. Contar cuantos nacieron en años pares e impares
+
+lista_anios_nacimiento = [anio_nacimiento_1, anio_nacimiento_2]
+
+contador_pares = 0
+contador_impares = 0
+
+for anio in lista_anios_nacimiento:
+    if anio % 2 == 0:
+        contador_pares += 1
+    else:
+        contador_impares += 1
+
+print(f"\n-- Analisis de años --")
+print(f"Cantidad de años pares: {contador_pares}")
+print(f"Cantidad de años impares: {contador_impares}")
+
+# 3. Si todos nacieron despues del 2000, mostrar que pertenecen a la generacion Z.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 nac_1 = int(input("Ingrese el primer año de nacimiento: "))
