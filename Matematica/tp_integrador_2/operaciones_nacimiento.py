@@ -13,7 +13,7 @@ B. Operaciones con años de nacimiento
   Ingreso de los años de nacimiento. 
   
   """
-
+#-----------------------------------------------------------------------------------------------
 # Funciones auxiliares:
 
 def es_bisiesto(anio: int) -> bool: # le pido que me devuelva un booleano (V o F)
@@ -31,8 +31,27 @@ def es_bisiesto(anio: int) -> bool: # le pido que me devuelva un booleano (V o F
     """
     return (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0)
 
+def calcular_producto_cartesiano(conjunto_a: list, conjunto_b: list) -> list:
+    """
+    Calcula el producto cartesiano entre dos conjuntos a traves de listas
+    
+    Args:
+        conjunto_a - lista 1
+        conjunto_b - lista 2
+        
+    Returns:
+        list: devuelve una lista de tuplas que representa el producto cartesiano
+    """
+    producto = []
+    
+    for elemento_a in conjunto_a:
+        for elemento_b in conjunto_b:
+            producto.append((elemento_a, elemento_b))
+    return producto
 
+#-----------------------------------------------------------------------------------------------
 
+# Programa principal:
 
 
 nac_1 = int(input("Ingrese el primer año de nacimiento: "))
