@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn">
+  <bpmn:process id="Proceso_Chatbot_Colchon" isExecutable="true">
+    <bpmn:startEvent id="Inicio_Conversacion" name="Inicio de Conversación">
+      <bpmn:outgoing>Flow_1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="Seleccion_Colchon" name="Usuario elige Colchón o Sommier + Colchón">
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_Medida" name="¿Sabe la medida?">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_A_ConsultarMedidas</bpmn:outgoing>
+      <bpmn:outgoing>Flow_A_ElegirMedida</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Consulta_Medidas" name="Mostrar medidas disponibles">
+      <bpmn:incoming>Flow_A_ConsultarMedidas</bpmn:incoming>
+      <bpmn:outgoing>Flow_3</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Elegir_Medida" name="Usuario selecciona medida">
+      <bpmn:incoming>Flow_A_ElegirMedida</bpmn:incoming>
+      <bpmn:incoming>Flow_3</bpmn:incoming>
+      <bpmn:outgoing>Flow_4</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_Estructura" name="¿Sabe la estructura?">
+      <bpmn:incoming>Flow_4</bpmn:incoming>
+      <bpmn:outgoing>Flow_A_ConsultarEstructura</bpmn:outgoing>
+      <bpmn:outgoing>Flow_A_ElegirEstructura</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Consulta_Estructura" name="Explicar diferencias entre espuma y resortes">
+      <bpmn:incoming>Flow_A_ConsultarEstructura</bpmn:incoming>
+      <bpmn:outgoing>Flow_5</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Elegir_Estructura" name="Usuario selecciona estructura">
+      <bpmn:incoming>Flow_5</bpmn:incoming>
+      <bpmn:incoming>Flow_A_ElegirEstructura</bpmn:incoming>
+      <bpmn:outgoing>Flow_6</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Seleccion_Peso" name="Seleccionar peso del usuario">
+      <bpmn:incoming>Flow_6</bpmn:incoming>
+      <bpmn:outgoing>Flow_7</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:task id="Recomendar_Producto" name="Bot recomienda producto">
+      <bpmn:incoming>Flow_7</bpmn:incoming>
+      <bpmn:outgoing>Flow_8</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="Gateway_Preguntas" name="¿Consulta adicional?">
+      <bpmn:incoming>Flow_8</bpmn:incoming>
+      <bpmn:outgoing>Flow_A_Precio</bpmn:outgoing>
+      <bpmn:outgoing>Flow_A_Pago</bpmn:outgoing>
+      <bpmn:outgoing>Flow_A_Promo</bpmn:outgoing>
+      <bpmn:outgoing>Flow_A_NoMasPreguntas</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Consulta_Precio" name="Usuario pregunta por precios">
+      <bpmn:incoming>Flow_A_Precio</bpmn:incoming>
+      <bpmn:outgoing>Flow_9</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Consulta_Pago" name="Usuario pregunta por formas de pago">
+      <bpmn:incoming>Flow_A_Pago</bpmn:incoming>
+      <bpmn:outgoing>Flow_10</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Consulta_Promo" name="Usuario pregunta por promociones">
+      <bpmn:incoming>Flow_A_Promo</bpmn:incoming>
+      <bpmn:outgoing>Flow_11</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_Asesoramiento" name="¿Desea ser contactado por un vendedor?">
+      <bpmn:incoming>Flow_9</bpmn:incoming>
+      <bpmn:incoming>Flow_10</bpmn:incoming>
+      <bpmn:incoming>Flow_11</bpmn:incoming>
+      <bpmn:incoming>Flow_A_NoMasPreguntas</bpmn:incoming>
+      <bpmn:outgoing>Flow_A_ContactarVendedor</bpmn:outgoing>
+      <bpmn:outgoing>Flow_A_Finalizar</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="Fin_Asesoramiento" name="Contactar vendedor">
+      <bpmn:incoming>Flow_A_ContactarVendedor</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:endEvent id="Fin_SinAsesoramiento" name="Finaliza sin contacto">
+      <bpmn:incoming>Flow_A_Finalizar</bpmn:incoming>
+    </bpmn:endEvent>
+
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="Inicio_Conversacion" targetRef="Seleccion_Colchon" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Seleccion_Colchon" targetRef="Gateway_Medida" />
+    <bpmn:sequenceFlow id="Flow_A_ConsultarMedidas" name="Quiere consultar" sourceRef="Gateway_Medida" targetRef="Consulta_Medidas" />
+    <bpmn:sequenceFlow id="Flow_A_ElegirMedida" name="Ya sabe" sourceRef="Gateway_Medida" targetRef="Elegir_Medida" />
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Consulta_Medidas" targetRef="Elegir_Medida" />
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="Elegir_Medida" targetRef="Gateway_Estructura" />
+    <bpmn:sequenceFlow id="Flow_A_ConsultarEstructura" name="Quiere consultar" sourceRef="Gateway_Estructura" targetRef="Consulta_Estructura" />
+    <bpmn:sequenceFlow id="Flow_A_ElegirEstructura" name="Ya sabe" sourceRef="Gateway_Estructura" targetRef="Elegir_Estructura" />
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Consulta_Estructura" targetRef="Elegir_Estructura" />
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Elegir_Estructura" targetRef="Seleccion_Peso" />
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="Seleccion_Peso" targetRef="Recomendar_Producto" />
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="Recomendar_Producto" targetRef="Gateway_Preguntas" />
+    <bpmn:sequenceFlow id="Flow_A_Precio" name="Precio" sourceRef="Gateway_Preguntas" targetRef="Consulta_Precio" />
+    <bpmn:sequenceFlow id="Flow_A_Pago" name="Pago" sourceRef="Gateway_Preguntas" targetRef="Consulta_Pago" />
+    <bpmn:sequenceFlow id="Flow_A_Promo" name="Promociones" sourceRef="Gateway_Preguntas" targetRef="Consulta_Promo" />
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Consulta_Precio" targetRef="Gateway_Asesoramiento" />
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Consulta_Pago" targetRef="Gateway_Asesoramiento" />
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Consulta_Promo" targetRef="Gateway_Asesoramiento" />
+    <bpmn:sequenceFlow id="Flow_A_NoMasPreguntas" name="No" sourceRef="Gateway_Preguntas" targetRef="Gateway_Asesoramiento" />
+    <bpmn:sequenceFlow id="Flow_A_ContactarVendedor" name="Sí" sourceRef="Gateway_Asesoramiento" targetRef="Fin_Asesoramiento" />
+    <bpmn:sequenceFlow id="Flow_A_Finalizar" name="No" sourceRef="Gateway_Asesoramiento" targetRef="Fin_SinAsesoramiento" />
+  </bpmn:process>
+</bpmn:definitions>
