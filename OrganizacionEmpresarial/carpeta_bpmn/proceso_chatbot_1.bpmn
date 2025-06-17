@@ -77,7 +77,6 @@
     <bpmn:endEvent id="Fin_SinAsesoramiento" name="Finaliza sin contacto">
       <bpmn:incoming>Flow_A_Finalizar</bpmn:incoming>
     </bpmn:endEvent>
-
     <bpmn:sequenceFlow id="Flow_1" sourceRef="Inicio_Conversacion" targetRef="Seleccion_Colchon" />
     <bpmn:sequenceFlow id="Flow_2" sourceRef="Seleccion_Colchon" targetRef="Gateway_Medida" />
     <bpmn:sequenceFlow id="Flow_A_ConsultarMedidas" name="Quiere consultar" sourceRef="Gateway_Medida" targetRef="Consulta_Medidas" />
@@ -100,4 +99,7 @@
     <bpmn:sequenceFlow id="Flow_A_ContactarVendedor" name="Sí" sourceRef="Gateway_Asesoramiento" targetRef="Fin_Asesoramiento" />
     <bpmn:sequenceFlow id="Flow_A_Finalizar" name="No" sourceRef="Gateway_Asesoramiento" targetRef="Fin_SinAsesoramiento" />
   </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Proceso_Chatbot_Colchon" />
+  </bpmndi:BPMNDiagram>
 </bpmn:definitions>
